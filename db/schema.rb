@@ -30,8 +30,9 @@ ActiveRecord::Schema.define(version: 20141028141958) do
   create_table "quests", force: true do |t|
     t.integer  "skill_id"
     t.string   "name"
-    t.string   "description"
+    t.text     "description"
     t.integer  "experience_points"
+    t.string   "link"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "icon_url"
