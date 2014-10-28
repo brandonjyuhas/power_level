@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root "welcome#index"
-  devise_for :users
+  # Pass users to custom registrations controller
+  devise_for :users, :controllers => { registrations: 'registrations' }
   resources :welcome
   resources :skills
   # The priority is based upon order of creation: first created -> highest priority.
