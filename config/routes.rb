@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { registrations: 'registrations' }
   resources :users
   resources :quests do
-    resources :user_quests
+    resources :user_quests do
+      post :complete, on: :member
+    end
   end
   resources :welcome
   resources :skills

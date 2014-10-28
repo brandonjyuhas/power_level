@@ -251,6 +251,7 @@ Quest.create([
     {
       username: "brandonjyuhas",
       email: "brandonjyuhas@gmail.com",
-      password: "password"
+      password: "password",
+      icon_url: "/assets/user_icons/1.jpg"
     }
     ])

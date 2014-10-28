@@ -72,6 +72,7 @@ ActiveRecord::Schema.define(version: 20141028141958) do
     t.string   "username",                            null: false
     t.integer  "level",                  default: 1
     t.integer  "experience_points",      default: 0
+    t.string   "icon_url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
