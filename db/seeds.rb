@@ -246,3 +246,11 @@ Quest.create([
 
 
   ]);
+
+  User.create([
+    {
+      username: "brandonjyuhas",
+      email: "brandonjyuhas@gmail.com",
+      password: "password"
+    }
+    ])

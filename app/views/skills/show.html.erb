@@ -26,14 +26,12 @@
     <div class="large-6 columns">
 
       <% @quests.each do |x|%>
-      <div class="row">
-        <div class="large-2 columns small-3"><img src="<%= x.icon_url %>"/></div>
+      <div class="row quest<% if @selected_quests.include? x.id %> accepted<% end if @selected_quests %>">
+          <div class="large-2 columns small-3 new-quest" quest="<%= x.id %>"><img src="<%= x.icon_url %>"/></div>
         <div class="large-10 columns">
           <p><strong><%= x.name %>:</strong> <%= x.description %><% unless x.link.blank? %><a href='<%= x.link %>'>here.</a><% end %></p>
-          <ul class="inline-list">
-            <li><a href="">Accept</a></li>
-          </ul>
         </div>
+
       </div>
       <hr/>
       <% end %>

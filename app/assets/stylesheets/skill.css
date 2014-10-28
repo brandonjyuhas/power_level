@@ -1,0 +1,8 @@
+.quest {
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.accepted {
+  border: 5px solid green;
+}
