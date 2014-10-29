@@ -8,7 +8,11 @@ Rails.application.routes.draw do
       post :complete, on: :member
     end
   end
-  resources :welcome
+  resources :welcome do
+    get :about, on: :collection
+    get :legal, on: :collection
+    get :you, on: :collection
+  end
   resources :skills
 
 

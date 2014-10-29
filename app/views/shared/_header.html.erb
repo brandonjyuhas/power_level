@@ -18,11 +18,11 @@
 
         <section class="top-bar-section">
           <ul class="left">
-            <li><a href="#">About Us</a></li>
+            <li><a href="/welcome/about">About Us</a></li>
             <% if user_signed_in? %>
               <li><a href="/users/<%= current_user.id %>">About You</a></li>
             <% else %>
-              <li><a href="#splash">About You</a><li>
+              <li><a href="/welcome/you">About You</a><li>
             <% end %>
 
           </ul>

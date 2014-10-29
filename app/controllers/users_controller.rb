@@ -6,5 +6,6 @@ class UsersController < ApplicationController
     @quests = @user_quests.map do |x|
       x.quest
     end
+    @level = @user.find_level
   end
 end

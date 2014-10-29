@@ -5,6 +5,9 @@ class SkillsController < ApplicationController
   end
 
   def show
+    # Hacky way to resolve no method .include? on nil
+    @completed_quests = []
+    @selected_quests = []
     @skill = Skill.find(params[:id])
     @quests = Quest.where(skill_id: params[:id]).order(:experience_points)
     if user_signed_in?

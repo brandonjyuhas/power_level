@@ -8,13 +8,13 @@
 
           <div class="hide-for-small panel">
             <h3><%= @user.username %></h3>
-            <h5 class="subheader" id="xp"><%= @user.experience_points %>
-            </h5>
+            <h5 class="subheader" id="level">Level: <%= @level[0] %></h5>
+            <h5 class="subheader" id="xp"><%= @user.experience_points %></h5>
           </div>
 
           <a href="#">
           <div class="panel callout radius">
-            <h6>99  items in your cart</h6>
+            <h6><%= @level[1] %> XP until Level <%= @level[0] + 1 %></h6>
           </div>
           </a>
 

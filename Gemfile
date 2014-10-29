@@ -17,6 +17,8 @@ gem 'coffee-rails', '~> 4.0.0'
 # Use devise for user authentication
 gem 'devise'
 
+gem 'pry'
+
 # Use Foundation for CSS
 gem 'foundation-rails'
 
