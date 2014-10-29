@@ -1,0 +1,63 @@
+      <div class="row">
+
+
+
+        <div class="large-4 small-12 columns">
+
+          <img src="<%= @user.icon_url %>">
+
+          <div class="hide-for-small panel">
+            <h3><%= @user.username %></h3>
+            <h5 class="subheader" id="xp"><%= @user.experience_points %>
+            </h5>
+          </div>
+
+          <a href="#">
+          <div class="panel callout radius">
+            <h6>99  items in your cart</h6>
+          </div>
+          </a>
+
+        </div>
+
+        <div class="large-8 columns">
+          <div class="panel"><h1>Active Quests</h1>(Click to close, click text to expand)</div>
+          <div class="row">
+            <% @user_quests.each do |x| %>
+              <% unless x.complete %>
+              <div class="large-4 small-6 columns" id="<%= x.id %>">
+                <img src="<%= x.quest.skill.icon_url %>" data-reveal-id="myModal<%= x.id %>">
+                <div class="panel closed expandable">
+                  <h5><%= x.quest.name %></h5>
+                  <h6 class="subheader"><%= x.quest.description %><% unless x.quest.link.blank? %><a href='<%= x.quest.link %>'>here.</a><% end %></h6>
+                </div>
+
+
+                <div id="myModal<%= x.id %>" class="reveal-modal" data-reveal>
+                  <h2>Are you sure you want to complete this quest?</h2>
+                  <p>Cheaters never win.</p>
+                  <a class="close-reveal-modal">&#215;</a>
+                  <h1 class="complete radius button" quest="<%= x.quest.id %>" user-quest="<%= x.id %>" quest-xp="<%= x.quest.experience_points %>">Complete Quest</h1>
+                </div>
+              </div>
+              <% end %>
+            <% end %>
+          </div>
+
+          <div class="panel"><h1>Completed Quests</h1>(Click text to expand)</div>
+          <div class="row completed">
+            <% @user_quests.each do |x| %>
+              <% if x.complete %>
+              <div class="large-4 small-6 columns" id="<%= x.id %>">
+                <img src="<%= x.quest.skill.icon_url %>">
+                <div class="panel closed expandable">
+                  <h5><%= x.quest.name %></h5>
+                  <h6 class="subheader"><%= x.quest.description %><% unless x.quest.link.blank? %><a href='<%= x.quest.link %>'>here.</a><% end %></h6>
+                </div>
+              </div>
+            <% end %>
+            <% end %>
+          </div>
+
+
+

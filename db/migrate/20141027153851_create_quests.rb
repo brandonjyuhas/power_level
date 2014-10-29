@@ -3,8 +3,9 @@ class CreateQuests < ActiveRecord::Migration
     create_table :quests do |t|
       t.references :skill, index: true
       t.string :name
-      t.string :description
+      t.text :description
       t.integer :experience_points
+      t.string :link
 
       t.timestamps
     end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141027154737) do
+ActiveRecord::Schema.define(version: 20141028141958) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,10 +30,12 @@ ActiveRecord::Schema.define(version: 20141027154737) do
   create_table "quests", force: true do |t|
     t.integer  "skill_id"
     t.string   "name"
-    t.string   "description"
+    t.text     "description"
     t.integer  "experience_points"
+    t.string   "link"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "icon_url"
   end
 
   add_index "quests", ["skill_id"], name: "index_quests_on_skill_id", using: :btree
@@ -70,6 +72,7 @@ ActiveRecord::Schema.define(version: 20141027154737) do
     t.string   "username",                            null: false
     t.integer  "level",                  default: 1
     t.integer  "experience_points",      default: 0
+    t.string   "icon_url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

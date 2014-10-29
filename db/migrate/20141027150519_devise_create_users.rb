@@ -23,6 +23,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :username, null: false
       t.integer :level, default: 1
       t.integer :experience_points, default: 0
+      t.string :icon_url
 
 
 
