@@ -14,7 +14,7 @@
   <div><%= f.label :username %><br />
     <%= f.text_field :username %></div>
 
-  <div id="icon-selector"><%= f.label :icon_url %></br />
+  <div id="icon-selector"><%= f.label :icon_url, "Avatar" %></br />
     <%= f.hidden_field :icon_url %>
     <% 8.times do |x| %><img src="/assets/user_icons/<%= x + 1 %>.jpg" class="user-icon-selector"/><% end %>
   </div>

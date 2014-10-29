@@ -240,7 +240,205 @@ Quest.create([
     icon_url: "/assets/quest_icons/9.jpg",
     experience_points: 4500,
     link: "http://vimeo.com/58576388"
+  },
+  {
+    skill_id: 3,
+    name: "Major Scale",
+    description: "Play the major scale starting on E five times without missing a note",
+    icon_url: "/assets/quest_icons/1.jpg",
+    experience_points: 500,
+    link: ""
+  },
+  {
+    skill_id: 3,
+    name: "Minor Scale",
+    description: "Play the minor scale starting on E five times without missing a note",
+    icon_url: "/assets/quest_icons/1.jpg",
+    experience_points: 750,
+    link: ""
+  },
+  {
+    skill_id: 3,
+    name: "Whammy!",
+    description: "Bend a note with a whammy bar. Promptly tune your guitar.",
+    icon_url: "/assets/quest_icons/2.jpg",
+    experience_points: 1000,
+    link: ""
+  },
+  {
+    skill_id: 3,
+    name: "Smoke on the Water",
+    description: "Annoy your friends by playing Smoke on the Water",
+    icon_url: "/assets/quest_icons/2.jpg",
+    experience_points: 1250,
+    link: ""
+  },
+  {
+    skill_id: 3,
+    name: "Iron Man",
+    description: "Learn Iron Man. You rawk!",
+    icon_url: "/assets/quest_icons/2.jpg",
+    experience_points: 1500,
+    link: ""
+  },
+  {
+    skill_id: 3,
+    name: "Dammit",
+    description: "Learn Dammit by Blink-182. You're already better than Tom Delonge",
+    icon_url: "/assets/quest_icons/3.jpg",
+    experience_points: 1750,
+    link: ""
+  },
+  {
+    skill_id: 3,
+    name: "Imperial March",
+    description: "Learn the Imperial March from Star Wars. Just in time for the next 8 movies!",
+    icon_url: "/assets/quest_icons/3.jpg",
+    experience_points: 2000,
+    link: ""
+  },
+  {
+    skill_id: 3,
+    name: "A Major",
+    description: "Memorize all Positions of the A major chord. Some of them are uncomfortable.",
+    icon_url: "/assets/quest_icons/4.jpg",
+    experience_points: 2250,
+    link: ""
+  },
+  {
+    skill_id: 3,
+    name: "Sweet Child of Mine",
+    description: "Learn Sweet Child of Mine. Play it without missing a note.",
+    icon_url: "/assets/quest_icons/5.jpg",
+    experience_points: 2750,
+    link: ""
+  },
+  {
+    skill_id: 3,
+    name: "Smooth",
+    description: "Learn Smooth by Santera. ",
+    icon_url: "/assets/quest_icons/6.jpg",
+    experience_points: 3250,
+    link: ""
+  },
+  {
+    skill_id: 3,
+    name: "Freebird!",
+    description: "Learn Freebird, don't miss a note.",
+    icon_url: "/assets/quest_icons/7.jpg",
+    experience_points: 3750,
+    link: ""
+  },
+  {
+    skill_id: 3,
+    name: "Cliffs Of Dover",
+    description: "Learn Cliffs Of Dover by Eric Johnson. You've almost made it.",
+    icon_url: "/assets/quest_icons/8.jpg",
+    experience_points: 4500,
+    link: ""
+  },
+  {
+    skill_id: 3,
+    name: "Ronda alla Turca",
+    description: "Learn Ronda alla Turca. Play it without missing a note. Insist that your friends stop playing guitar. See the example ",
+    icon_url: "/assets/quest_icons/9.jpg",
+    experience_points: 5000,
+    link: "https://www.youtube.com/watch?v=26HLgXWF-Co"
+  },
+  {
+    skill_id: 4,
+    name: "Oil Change",
+    description: "Change your own Oil!",
+    icon_url: "/assets/quest_icons/1.jpg",
+    experience_points: 500,
+    link: ""
+  },
+  {
+    skill_id: 4,
+    name: "Tire Replacement",
+    description: "Replace a tire on your car!",
+    icon_url: "/assets/quest_icons/2.jpg",
+    experience_points: 1000,
+    link: ""
+  },
+  {
+    skill_id: 4,
+    name: "Repair Tire(Plug and Patch)",
+    description: "Use a plug and patch to repair a tire.",
+    icon_url: "/assets/quest_icons/2.jpg",
+    experience_points: 1250,
+    link: ""
+  },
+  {
+    skill_id: 4,
+    name: "4 Wheel Alignment",
+    description: "Perform a 4 wheel alignment on a car.",
+    icon_url: "/assets/quest_icons/3.jpg",
+    experience_points: 1500,
+    link: ""
+  },
+  {
+    skill_id: 4,
+    name: "Fluid Flush",
+    description: "Perform break, power steering and transmission fluid flushes.",
+    icon_url: "/assets/quest_icons/3.jpg",
+    experience_points: 1750,
+    link: ""
+  },
+  {
+    skill_id: 4,
+    name: "Coolant Service",
+    description: "Perform Coolant Service work on your car",
+    icon_url: "/assets/quest_icons/4.jpg",
+    experience_points: 2000,
+    link: ""
+  },
+  {
+    skill_id: 4,
+    name: "Minor Manufacture Recalls",
+    description: "Perform a minor manufacture recall.",
+    icon_url: "/assets/quest_icons/5.jpg",
+    experience_points: 2500,
+    link: ""
+  },
+  {
+    skill_id: 4,
+    name: "Welding",
+    description: "Get a welder and get to work!",
+    icon_url: "/assets/quest_icons/6.jpg",
+    experience_points: 3000,
+    link: ""
+  },
+  {
+    skill_id: 4,
+    name: "A/C Diagnosis",
+    description: "Perform an AC Diagnosis",
+    icon_url: "/assets/quest_icons/7.jpg",
+    experience_points: 3500,
+    link: ""
+  },
+  {
+    skill_id: 4,
+    name: "Perform Engine Diagnosis",
+    description: "Run an Engine Diagnosis",
+    icon_url: "/assets/quest_icons/8.jpg",
+    experience_points: 4500,
+    link: ""
+  },
+  {
+    skill_id: 4,
+    name: "Rebuild Engine",
+    description: "Rebuild you cars engine. Get that grease off of you. Have a beer.",
+    icon_url: "/assets/quest_icons/9.jpg",
+    experience_points: 5500,
+    link: ""
   }
+
+
+
+
+
+
 
 
 
