@@ -7,8 +7,8 @@
           <img src="<%= @user.icon_url %>">
 
           <div class="hide-for-small panel">
-            <h3>Header</h3>
-            <h5 class="subheader">Risus ligula, aliquam nec fermentum vitae, sollicitudin eget urna. Donec dignissim nibh fermentum odio ornare sagittis.
+            <h3><%= @user.username %></h3>
+            <h5 class="subheader" id="xp"><%= @user.experience_points %>
             </h5>
           </div>
 
@@ -37,7 +37,7 @@
                   <h2>Are you sure you want to complete this quest?</h2>
                   <p>Cheaters never win.</p>
                   <a class="close-reveal-modal">&#215;</a>
-                  <h1 class="complete radius button" quest="<%= x.quest.id %>" user_quest="<%= x.id %>">Complete Quest</h1>
+                  <h1 class="complete radius button" quest="<%= x.quest.id %>" user-quest="<%= x.id %>" quest-xp="<%= x.quest.experience_points %>">Complete Quest</h1>
                 </div>
               </div>
               <% end %>

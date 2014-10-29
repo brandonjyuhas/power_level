@@ -3,7 +3,11 @@ class UserQuest < ActiveRecord::Base
   belongs_to :quest
 
   def completed
-    self.complete = true
-    self.save
+    unless self.complete == true
+      self.user.experience_points += self.quest.experience_points
+      self.complete = true
+      self.user.save
+      self.save
+    end
   end
 end
