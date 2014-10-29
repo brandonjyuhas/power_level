@@ -22,6 +22,14 @@ Skill.create([
   {
     name: "Car Repairs",
     icon_url: "/assets/skill_icons/car.jpg"
+  },
+  {
+    name: "Yoga",
+    icon_url: "/assets/skill_icons/yoga.jpg"
+  },
+  {
+    name: "First Aid",
+    icon_url: "/assets/skill_icons/first_aid.jpg"
   }
 
   ])
@@ -432,17 +440,151 @@ Quest.create([
     icon_url: "/assets/quest_icons/9.jpg",
     experience_points: 5500,
     link: ""
+  },
+  {
+    skill_id: 5,
+    name: "Tadasana",
+    description: "Mountain Pose. See instructions ",
+    icon_url: "/assets/quest_icons/1.jpg",
+    experience_points: 500,
+    link: "http://www.yogaoutlet.com/guides/how-to-do-mountain-pose-in-yoga"
+  },
+  {
+    skill_id: 5,
+    name: "Downward Facing Dog,",
+    description: "See instructions ",
+    icon_url: "/assets/quest_icons/2.jpg",
+    experience_points: 1000,
+    link: "http://www.yogajournal.com/pose/downward-facing-dog/"
+  },
+  {
+    skill_id: 5,
+    name: "Warrior Pose",
+    description: "Fight fight fight! See instructions ",
+    icon_url: "/assets/quest_icons/3.jpg",
+    experience_points: 1500,
+    link: "http://yoga.about.com/od/yogasequences/tp/Yoga-Warrior-Poses-Sequence.htm"
+  },
+  {
+    skill_id: 5,
+    name: "Baddha Konasana",
+    description: "Butterfly Pose. See instructions ",
+    icon_url: "/assets/quest_icons/4.jpg",
+    experience_points: 2000,
+    link: "http://www.artofliving.org/us-en/yoga/yoga-poses/butterfly-pose-badhakonasana"
+  },
+  {
+    skill_id: 5,
+    name: "Trikonasana",
+    description: "Triangle Pose. See instructions ",
+    icon_url: "/assets/quest_icons/5.jpg",
+    experience_points: 2500,
+    link: "http://yoga.about.com/od/yogaposes/a/triangle.htm"
+  },
+  {
+    skill_id: 5,
+    name: "Paschimottanasana",
+    description: "Seated Forward Fold. See instructions ",
+    icon_url: "/assets/quest_icons/6.jpg",
+    experience_points: 3000,
+    link: "http://www.yogajournal.com/pose/seated-forward-bend/"
+  },
+  {
+    skill_id: 5,
+    name: "Ustrasana",
+    description: "Camel Pose. See instructions ",
+    icon_url: "/assets/quest_icons/7.jpg",
+    experience_points: 3500,
+    link: "http://www.yogajournal.com/pose/camel-pose/"
+  },
+  {
+    skill_id: 5,
+    name: "Bakasana",
+    description: "Crow Pose. See instructions ",
+    icon_url: "/assets/quest_icons/8.jpg",
+    experience_points: 4000,
+    link: "http://www.wikihow.com/Do-the-Crow-Pose-(Yoga)"
+  },
+  {
+    skill_id: 5,
+    name: "Urdhva Dhanurasana",
+    description: "Backbend. See instructions ",
+    icon_url: "/assets/quest_icons/9.jpg",
+    experience_points: 4500,
+    link: "http://www.yogajournal.com/pose/upward-bow-or-wheel-pose/"
+  },
+  {
+    skill_id: 6,
+    name: "Treat an Open Wound",
+    description: "Follow the instructions ",
+    icon_url: "/assets/quest_icons/1.jpg",
+    experience_points: 500,
+    link: "http://www.webmd.com/a-to-z-guides/wound-care-10/relieving-wound-pain"
+  },
+  {
+    skill_id: 6,
+    name: "Identity and Treat Heat Stroke",
+    description: "Follow the instructions ",
+    icon_url: "/assets/quest_icons/2.jpg",
+    experience_points: 1000,
+    link: "http://www.webmd.com/a-to-z-guides/heat-stroke-symptoms-and-treatment"
+  },
+  {
+    skill_id: 6,
+    name: "Treat Second Degree Burn",
+    description: "Follow the instructions ",
+    icon_url: "/assets/quest_icons/3.jpg",
+    experience_points: 1500,
+    link: "http://www.webmd.com/first-aid/tc/home-treatment-for-second-degree-burns-topic-overview"
+  },
+  {
+    skill_id: 6,
+    name: "Identify Anaphylactic Shock",
+    description: "Follow the instructions ",
+    icon_url: "/assets/quest_icons/4.jpg",
+    experience_points: 2000,
+    link: "http://www.webmd.com/allergies/guide/anaphylaxis"
+  },
+  {
+    skill_id: 6,
+    name: "Treat Victim of Poisoning",
+    description: "Follow the instructions ",
+    icon_url: "/assets/quest_icons/5.jpg",
+    experience_points: 2500,
+    link: "http://www.wikihow.com/Treat-Poisoning"
+  },
+  {
+    skill_id: 6,
+    name: "Apply Splint to a Simple Fracture",
+    description: "Follow the instructions ",
+    icon_url: "/assets/quest_icons/6.jpg",
+    experience_points: 3000,
+    link: "http://www.emedicinehealth.com/wilderness_splinting/article_em.htm"
+  },
+  {
+    skill_id: 6,
+    name: "Treat a Compound Fracture",
+    description: "Follow the instructions ",
+    icon_url: "/assets/quest_icons/7.jpg",
+    experience_points: 3500,
+    link: "http://www.emedicinehealth.com/wilderness_splinting/article_em.htm"
+  },
+  {
+    skill_id: 6,
+    name: "CPR",
+    description: "Perform Cardiopulmonary resuscitation. Follow the instructions ",
+    icon_url: "/assets/quest_icons/8.jpg",
+    experience_points: 4000,
+    link: "http://www.emergencycareforyou.org/EmergencyManual/HowToPerformCPR/Default.aspx"
+  },
+  {
+    skill_id: 6,
+    name: "Transport Unconscious Patient",
+    description: "Follow the instructions ",
+    icon_url: "/assets/quest_icons/9.jpg",
+    experience_points: 4500,
+    link: "http://www.ast.org/uploadedFiles/Main_Site/Content/About_Us/Standard%20Patient%20Transportation.pdf"
   }
-
-
-
-
-
-
-
-
-
-
   ]);
 
   User.create([
