@@ -20,9 +20,6 @@ gem 'devise'
 # Use Foundation for CSS
 gem 'foundation-rails'
 
-# Use Angular for front-end framework
-gem 'angularjs-rails'
-
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks

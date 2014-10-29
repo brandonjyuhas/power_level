@@ -28,3 +28,10 @@ $('.close-reveal-modal').on('click', function(){
   // Hacky Catch-All for closing the modal
   $('.reveal-modal-bg').hide();
 });
+
+// Select User Icon
+$('.user-icon-selector').on('click', function(){
+  $('.user-icon-selector').removeClass('selected-icon');
+  $(this).addClass('selected-icon');
+  $('#user_icon_url').val($(this).attr('src'));
+})
