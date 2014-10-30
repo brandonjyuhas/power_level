@@ -27,6 +27,6 @@ class User < ActiveRecord::Base
 
   # Figure out the level, XP to next level, XP, and Title
   def find_level
-    determine_level(self.experience_points, self.user_quests)
+    determine_level(self.experience_points, self.user_quests.where(complete: true))
   end
 end

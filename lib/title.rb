@@ -8,8 +8,11 @@ module Title
       skills_hash[user_quest.quest.skill.name] += 1
     end
 
+    puts skills_hash
+
     # Find the skill with the most instances
     highest_skill = skills_hash.max_by{|key,value| value}
+
     case highest_skill[0]
     when "Ruby"
       "Rubyist"

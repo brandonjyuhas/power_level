@@ -27,6 +27,10 @@ $('.complete').on('click', function(){
       $('#xp-level').html(data[1]);
       // Update Next-Level to Next-Level
       $('#next-level').html(data[0] + 1);
+      // Update Title to Title
+      $('#title').html(data[3]);
+      // Update Skill to Skill
+      $('#skill').html(data[4]);
       // Move Completed Quest to top of user-quest
       $('.completed').prepend($('#' + quest.attr('user-quest')).show());
   });
