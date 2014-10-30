@@ -3,7 +3,6 @@ $('.expandable').on('click', function(){
   $(this).toggleClass('closed');
 });
 
-
 $('.complete').on('click', function(){
   var quest = $(this)
     $.ajax({
@@ -12,7 +11,6 @@ $('.complete').on('click', function(){
       url: '/quests/' + quest.attr("quest") + '/user_quests/' + quest.attr(
         "user-quest") + '/complete'
     }).success(function(data){
-      console.log(data);
       // Pull data from modal attributes to determine if user leveled up
       if(data[0] > parseInt($('.level').eq(0).html())){
         $('#level-up').foundation('reveal', 'open');
