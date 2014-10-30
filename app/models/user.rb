@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   # Include level module in lib/level.rb
   include Level
+  # Include title module in lib/title.rb
+  include Title
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
@@ -23,8 +25,8 @@ class User < ActiveRecord::Base
     end
   end
 
-  # Figure out the level, XP to next level, and XP
+  # Figure out the level, XP to next level, XP, and Title
   def find_level
-    determine_level(self.experience_points)
+    determine_level(self.experience_points, self.user_quests.where(complete: true))
   end
 end

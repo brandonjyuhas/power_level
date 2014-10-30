@@ -3,7 +3,6 @@ $('.expandable').on('click', function(){
   $(this).toggleClass('closed');
 });
 
-
 $('.complete').on('click', function(){
   var quest = $(this)
     $.ajax({
@@ -12,7 +11,6 @@ $('.complete').on('click', function(){
       url: '/quests/' + quest.attr("quest") + '/user_quests/' + quest.attr(
         "user-quest") + '/complete'
     }).success(function(data){
-      console.log(data);
       // Pull data from modal attributes to determine if user leveled up
       if(data[0] > parseInt($('.level').eq(0).html())){
         $('#level-up').foundation('reveal', 'open');
@@ -29,6 +27,10 @@ $('.complete').on('click', function(){
       $('#xp-level').html(data[1]);
       // Update Next-Level to Next-Level
       $('#next-level').html(data[0] + 1);
+      // Update Title to Title
+      $('#title').html(data[3]);
+      // Update Skill to Skill
+      $('#skill').html(data[4]);
       // Move Completed Quest to top of user-quest
       $('.completed').prepend($('#' + quest.attr('user-quest')).show());
   });
