@@ -13,11 +13,9 @@ $('.complete').on('click', function(){
         "user-quest") + '/complete'
     }).success(function(data){
       console.log(data);
-      // Pull data from modal attributes
-      currentLevel = $('#level').html();
-      console.log(currentLevel);
-      if(data[0] > parseInt(currentLevel)){
-        alert('Level Up!');
+      // Pull data from modal attributes to determine if user leveled up
+      if(data[0] > parseInt($('.level').eq(0).html())){
+        $('#level-up').foundation('reveal', 'open');
       }
       $('#myModal' + quest.attr('user-quest')).foundation('reveal', 'close');
       $('.reveal-modal-bg').hide();
@@ -26,7 +24,7 @@ $('.complete').on('click', function(){
       // Level XP to XP
       $('#xp').html(data[2]);
       // Update Level to Level
-      $('#level').html(data[0]);
+      $('.level').html(data[0]);
       // Update XP-Level to XP-Level
       $('#xp-level').html(data[1]);
       // Update Next-Level to Next-Level
@@ -40,6 +38,12 @@ $('.close-reveal-modal').on('click', function(){
   // Hacky Catch-All for closing the modal
   $('.reveal-modal-bg').hide();
 });
+
+$('.close-modal').on('click', function(){
+  $('#level-up').foundation('reveal', 'close');
+  // Hacky Catch-All for closing level up modal
+  $('.reveal-modal-bg').hide();
+})
 
 // Select User Icon
 $('.user-icon-selector').on('click', function(){
