@@ -23,6 +23,9 @@ gem 'pry'
 # Use Foundation for CSS
 gem 'foundation-rails'
 
+# Use Rails12factor for heroku
+gem 'rails_12factor'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
