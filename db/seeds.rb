@@ -22,6 +22,14 @@ Skill.create([
   {
     name: "Car Repairs",
     icon_url: "/assets/skill_icons/car.jpg"
+  },
+  {
+    name: "Yoga",
+    icon_url: "/assets/skill_icons/yoga.jpg"
+  },
+  {
+    name: "First Aid",
+    icon_url: "/assets/skill_icons/first_aid.jpg"
   }
 
   ])
@@ -240,11 +248,343 @@ Quest.create([
     icon_url: "/assets/quest_icons/9.jpg",
     experience_points: 4500,
     link: "http://vimeo.com/58576388"
+  },
+  {
+    skill_id: 3,
+    name: "Major Scale",
+    description: "Play the major scale starting on E five times without missing a note",
+    icon_url: "/assets/quest_icons/1.jpg",
+    experience_points: 500,
+    link: ""
+  },
+  {
+    skill_id: 3,
+    name: "Minor Scale",
+    description: "Play the minor scale starting on E five times without missing a note",
+    icon_url: "/assets/quest_icons/1.jpg",
+    experience_points: 750,
+    link: ""
+  },
+  {
+    skill_id: 3,
+    name: "Whammy!",
+    description: "Bend a note with a whammy bar. Promptly tune your guitar.",
+    icon_url: "/assets/quest_icons/2.jpg",
+    experience_points: 1000,
+    link: ""
+  },
+  {
+    skill_id: 3,
+    name: "Smoke on the Water",
+    description: "Annoy your friends by playing Smoke on the Water",
+    icon_url: "/assets/quest_icons/2.jpg",
+    experience_points: 1250,
+    link: ""
+  },
+  {
+    skill_id: 3,
+    name: "Iron Man",
+    description: "Learn Iron Man. You rawk!",
+    icon_url: "/assets/quest_icons/2.jpg",
+    experience_points: 1500,
+    link: ""
+  },
+  {
+    skill_id: 3,
+    name: "Dammit",
+    description: "Learn Dammit by Blink-182. You're already better than Tom Delonge",
+    icon_url: "/assets/quest_icons/3.jpg",
+    experience_points: 1750,
+    link: ""
+  },
+  {
+    skill_id: 3,
+    name: "Imperial March",
+    description: "Learn the Imperial March from Star Wars. Just in time for the next 8 movies!",
+    icon_url: "/assets/quest_icons/3.jpg",
+    experience_points: 2000,
+    link: ""
+  },
+  {
+    skill_id: 3,
+    name: "A Major",
+    description: "Memorize all Positions of the A major chord. Some of them are uncomfortable.",
+    icon_url: "/assets/quest_icons/4.jpg",
+    experience_points: 2250,
+    link: ""
+  },
+  {
+    skill_id: 3,
+    name: "Sweet Child of Mine",
+    description: "Learn Sweet Child of Mine. Play it without missing a note.",
+    icon_url: "/assets/quest_icons/5.jpg",
+    experience_points: 2750,
+    link: ""
+  },
+  {
+    skill_id: 3,
+    name: "Smooth",
+    description: "Learn Smooth by Santera. ",
+    icon_url: "/assets/quest_icons/6.jpg",
+    experience_points: 3250,
+    link: ""
+  },
+  {
+    skill_id: 3,
+    name: "Freebird!",
+    description: "Learn Freebird, don't miss a note.",
+    icon_url: "/assets/quest_icons/7.jpg",
+    experience_points: 3750,
+    link: ""
+  },
+  {
+    skill_id: 3,
+    name: "Cliffs Of Dover",
+    description: "Learn Cliffs Of Dover by Eric Johnson. You've almost made it.",
+    icon_url: "/assets/quest_icons/8.jpg",
+    experience_points: 4500,
+    link: ""
+  },
+  {
+    skill_id: 3,
+    name: "Ronda alla Turca",
+    description: "Learn Ronda alla Turca. Play it without missing a note. Insist that your friends stop playing guitar. See the example ",
+    icon_url: "/assets/quest_icons/9.jpg",
+    experience_points: 5000,
+    link: "https://www.youtube.com/watch?v=26HLgXWF-Co"
+  },
+  {
+    skill_id: 4,
+    name: "Oil Change",
+    description: "Change your own Oil!",
+    icon_url: "/assets/quest_icons/1.jpg",
+    experience_points: 500,
+    link: ""
+  },
+  {
+    skill_id: 4,
+    name: "Tire Replacement",
+    description: "Replace a tire on your car!",
+    icon_url: "/assets/quest_icons/2.jpg",
+    experience_points: 1000,
+    link: ""
+  },
+  {
+    skill_id: 4,
+    name: "Repair Tire(Plug and Patch)",
+    description: "Use a plug and patch to repair a tire.",
+    icon_url: "/assets/quest_icons/2.jpg",
+    experience_points: 1250,
+    link: ""
+  },
+  {
+    skill_id: 4,
+    name: "4 Wheel Alignment",
+    description: "Perform a 4 wheel alignment on a car.",
+    icon_url: "/assets/quest_icons/3.jpg",
+    experience_points: 1500,
+    link: ""
+  },
+  {
+    skill_id: 4,
+    name: "Fluid Flush",
+    description: "Perform break, power steering and transmission fluid flushes.",
+    icon_url: "/assets/quest_icons/3.jpg",
+    experience_points: 1750,
+    link: ""
+  },
+  {
+    skill_id: 4,
+    name: "Coolant Service",
+    description: "Perform Coolant Service work on your car",
+    icon_url: "/assets/quest_icons/4.jpg",
+    experience_points: 2000,
+    link: ""
+  },
+  {
+    skill_id: 4,
+    name: "Minor Manufacture Recalls",
+    description: "Perform a minor manufacture recall.",
+    icon_url: "/assets/quest_icons/5.jpg",
+    experience_points: 2500,
+    link: ""
+  },
+  {
+    skill_id: 4,
+    name: "Welding",
+    description: "Get a welder and get to work!",
+    icon_url: "/assets/quest_icons/6.jpg",
+    experience_points: 3000,
+    link: ""
+  },
+  {
+    skill_id: 4,
+    name: "A/C Diagnosis",
+    description: "Perform an AC Diagnosis",
+    icon_url: "/assets/quest_icons/7.jpg",
+    experience_points: 3500,
+    link: ""
+  },
+  {
+    skill_id: 4,
+    name: "Perform Engine Diagnosis",
+    description: "Run an Engine Diagnosis",
+    icon_url: "/assets/quest_icons/8.jpg",
+    experience_points: 4500,
+    link: ""
+  },
+  {
+    skill_id: 4,
+    name: "Rebuild Engine",
+    description: "Rebuild you cars engine. Get that grease off of you. Have a beer.",
+    icon_url: "/assets/quest_icons/9.jpg",
+    experience_points: 5500,
+    link: ""
+  },
+  {
+    skill_id: 5,
+    name: "Tadasana",
+    description: "Mountain Pose. See instructions ",
+    icon_url: "/assets/quest_icons/1.jpg",
+    experience_points: 500,
+    link: "http://www.yogaoutlet.com/guides/how-to-do-mountain-pose-in-yoga"
+  },
+  {
+    skill_id: 5,
+    name: "Downward Facing Dog,",
+    description: "See instructions ",
+    icon_url: "/assets/quest_icons/2.jpg",
+    experience_points: 1000,
+    link: "http://www.yogajournal.com/pose/downward-facing-dog/"
+  },
+  {
+    skill_id: 5,
+    name: "Warrior Pose",
+    description: "Fight fight fight! See instructions ",
+    icon_url: "/assets/quest_icons/3.jpg",
+    experience_points: 1500,
+    link: "http://yoga.about.com/od/yogasequences/tp/Yoga-Warrior-Poses-Sequence.htm"
+  },
+  {
+    skill_id: 5,
+    name: "Baddha Konasana",
+    description: "Butterfly Pose. See instructions ",
+    icon_url: "/assets/quest_icons/4.jpg",
+    experience_points: 2000,
+    link: "http://www.artofliving.org/us-en/yoga/yoga-poses/butterfly-pose-badhakonasana"
+  },
+  {
+    skill_id: 5,
+    name: "Trikonasana",
+    description: "Triangle Pose. See instructions ",
+    icon_url: "/assets/quest_icons/5.jpg",
+    experience_points: 2500,
+    link: "http://yoga.about.com/od/yogaposes/a/triangle.htm"
+  },
+  {
+    skill_id: 5,
+    name: "Paschimottanasana",
+    description: "Seated Forward Fold. See instructions ",
+    icon_url: "/assets/quest_icons/6.jpg",
+    experience_points: 3000,
+    link: "http://www.yogajournal.com/pose/seated-forward-bend/"
+  },
+  {
+    skill_id: 5,
+    name: "Ustrasana",
+    description: "Camel Pose. See instructions ",
+    icon_url: "/assets/quest_icons/7.jpg",
+    experience_points: 3500,
+    link: "http://www.yogajournal.com/pose/camel-pose/"
+  },
+  {
+    skill_id: 5,
+    name: "Bakasana",
+    description: "Crow Pose. See instructions ",
+    icon_url: "/assets/quest_icons/8.jpg",
+    experience_points: 4000,
+    link: "http://www.wikihow.com/Do-the-Crow-Pose-(Yoga)"
+  },
+  {
+    skill_id: 5,
+    name: "Urdhva Dhanurasana",
+    description: "Backbend. See instructions ",
+    icon_url: "/assets/quest_icons/9.jpg",
+    experience_points: 4500,
+    link: "http://www.yogajournal.com/pose/upward-bow-or-wheel-pose/"
+  },
+  {
+    skill_id: 6,
+    name: "Treat an Open Wound",
+    description: "Follow the instructions ",
+    icon_url: "/assets/quest_icons/1.jpg",
+    experience_points: 500,
+    link: "http://www.webmd.com/a-to-z-guides/wound-care-10/relieving-wound-pain"
+  },
+  {
+    skill_id: 6,
+    name: "Identity and Treat Heat Stroke",
+    description: "Follow the instructions ",
+    icon_url: "/assets/quest_icons/2.jpg",
+    experience_points: 1000,
+    link: "http://www.webmd.com/a-to-z-guides/heat-stroke-symptoms-and-treatment"
+  },
+  {
+    skill_id: 6,
+    name: "Treat Second Degree Burn",
+    description: "Follow the instructions ",
+    icon_url: "/assets/quest_icons/3.jpg",
+    experience_points: 1500,
+    link: "http://www.webmd.com/first-aid/tc/home-treatment-for-second-degree-burns-topic-overview"
+  },
+  {
+    skill_id: 6,
+    name: "Identify Anaphylactic Shock",
+    description: "Follow the instructions ",
+    icon_url: "/assets/quest_icons/4.jpg",
+    experience_points: 2000,
+    link: "http://www.webmd.com/allergies/guide/anaphylaxis"
+  },
+  {
+    skill_id: 6,
+    name: "Treat Victim of Poisoning",
+    description: "Follow the instructions ",
+    icon_url: "/assets/quest_icons/5.jpg",
+    experience_points: 2500,
+    link: "http://www.wikihow.com/Treat-Poisoning"
+  },
+  {
+    skill_id: 6,
+    name: "Apply Splint to a Simple Fracture",
+    description: "Follow the instructions ",
+    icon_url: "/assets/quest_icons/6.jpg",
+    experience_points: 3000,
+    link: "http://www.emedicinehealth.com/wilderness_splinting/article_em.htm"
+  },
+  {
+    skill_id: 6,
+    name: "Treat a Compound Fracture",
+    description: "Follow the instructions ",
+    icon_url: "/assets/quest_icons/7.jpg",
+    experience_points: 3500,
+    link: "http://www.emedicinehealth.com/wilderness_splinting/article_em.htm"
+  },
+  {
+    skill_id: 6,
+    name: "CPR",
+    description: "Perform Cardiopulmonary resuscitation. Follow the instructions ",
+    icon_url: "/assets/quest_icons/8.jpg",
+    experience_points: 4000,
+    link: "http://www.emergencycareforyou.org/EmergencyManual/HowToPerformCPR/Default.aspx"
+  },
+  {
+    skill_id: 6,
+    name: "Transport Unconscious Patient",
+    description: "Follow the instructions ",
+    icon_url: "/assets/quest_icons/9.jpg",
+    experience_points: 4500,
+    link: "http://www.ast.org/uploadedFiles/Main_Site/Content/About_Us/Standard%20Patient%20Transportation.pdf"
   }
-
-
-
-
   ]);
 
   User.create([

@@ -14,14 +14,14 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
-# Use devise for user authentication
+# Use Devise for user authentication
 gem 'devise'
+
+# Use {ry for debugging
+gem 'pry'
 
 # Use Foundation for CSS
 gem 'foundation-rails'
-
-# Use Angular for front-end framework
-gem 'angularjs-rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

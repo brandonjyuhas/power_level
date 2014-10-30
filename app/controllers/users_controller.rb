@@ -6,5 +6,11 @@ class UsersController < ApplicationController
     @quests = @user_quests.map do |x|
       x.quest
     end
+    @level = @user.find_level
+  end
+
+  def update_stats
+    @stats =  @user.find_level
+    render :json => @stats
   end
 end
