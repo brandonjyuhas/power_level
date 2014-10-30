@@ -15,6 +15,7 @@ class UserQuestsController < ApplicationController
   def complete
     @user_quest = UserQuest.find(params[:id])
     @user_quest.completed
-    render json: @user_quest
+    @stats = @user_quest.user.find_level
+    render json: @stats, status: 200
   end
 end

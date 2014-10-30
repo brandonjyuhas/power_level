@@ -8,15 +8,13 @@
 
           <div class="hide-for-small panel">
             <h3><%= @user.username %></h3>
-            <h5 class="subheader" id="level">Level: <%= @level[0] %></h5>
-            <h5 class="subheader" id="xp"><%= @user.experience_points %></h5>
+            <h5 class="subheader">Level: <span id="level"><%= @level[0] %></span></h5>
+            <h5 class="subheader">Experience: <span id="xp"><%= @user.experience_points %></span></h5>
           </div>
 
-          <a href="#">
           <div class="panel callout radius">
-            <h6><%= @level[1] %> XP until Level <%= @level[0] + 1 %></h6>
+            <h6><span id="xp-level"><%= @level[1] %></span> XP until Level <span id="next-level"><%= @level[0] + 1 %></span></h6>
           </div>
-          </a>
 
         </div>
 
