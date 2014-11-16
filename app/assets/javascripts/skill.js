@@ -5,5 +5,6 @@ $('.new-quest').on('click', function(){
       url: '/quests/' + quest.attr("quest") + '/user_quests',
     }).success(function(){
     quest.parent().addClass('accepted');
+    toastr.success('Quest Accepted!');
   });
 });
