@@ -20,7 +20,7 @@ gem 'acts_as_votable', '~> 0.10.0'
 # Use Devise for user authentication
 gem 'devise'
 
-# Use {ry for debugging
+# Use pry for debugging
 gem 'pry'
 
 # Use Foundation for CSS

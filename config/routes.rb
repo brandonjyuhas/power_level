@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { registrations: 'registrations' }
   resources :users
   resources :quests do
+    member do
+      put "like", to: "quests#upvote"
+      put "dislike", to: "quests#downvote"
+    end
     resources :user_quests do
       post :complete, on: :member
     end
