@@ -1,0 +1,40 @@
+  <div class="row">
+    <div class="large-12 columns">
+      <div class="panel">
+        <h1>Add a New Quest!</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="large-3 columns ">
+      <div class="panel">
+        <a href="#"><img src="<%= @skill.icon_url %>"/></a>
+        <h5><%= @skill.name %></h5>
+          <div class="section-container vertical-nav" data-section data-options="deep_linking: false; one_up: true">
+        </div>
+      </div>
+    </div>
+
+    <div class="large-9 columns">
+
+      <% if flash[:alert] %>
+        <div class="alert">The following errors prevented the quest from being saved:
+          <ul>
+            <% flash[:alert].each do |i| %>
+              <li><%= i %></li>
+            <% end %>
+          </ul>
+
+      <% end %>
+
+      <%= form_for @quest do |f| %>
+        Quest Name: <%= f.text_field :name %>
+        Quest Description: <%= f.text_area :description %>
+        Experience Points: <%= f.number_field :experience_points %>
+        <%= f.hidden_field :skill_id, :value => @skill.id %>
+        <%= f.submit "Add your quest", :class => "radius button" %>
+      <% end %>
+    </div>
+  </div>

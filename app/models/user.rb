@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :user_experience_points
   has_many :user_quests
+  validates :username, presence: true
+  validates :icon_url, presence: true
 
   # Figure out which quests have been completed
   def find_completed
