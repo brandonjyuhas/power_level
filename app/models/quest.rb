@@ -1,6 +1,7 @@
 class Quest < ActiveRecord::Base
   # Include Icon for icon to experience points converter
   include Icon
+  acts_as_votable
 
   belongs_to :skill
   has_many :user_quests

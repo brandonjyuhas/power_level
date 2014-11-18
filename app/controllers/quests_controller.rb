@@ -18,6 +18,14 @@ class QuestsController < ApplicationController
     end
   end
 
+  def upvote
+
+  end
+
+  def downvote
+
+  end
+
   private
     def quest_params
       params.require(:quest).permit(:name, :description, :experience_points, :skill_id)
