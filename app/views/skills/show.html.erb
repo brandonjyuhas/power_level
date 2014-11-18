@@ -1,7 +1,7 @@
   <div class="row">
     <div class="large-12 columns">
       <div class="panel">
-        <h1>Click Icons to Accept Quests</h1>
+        <h1><% if user_signed_in? %>Click Icons to Accept Quests<% else %>Sign In to Accept Quests<% end %></h1>
       </div>
     </div>
   </div>
@@ -19,13 +19,13 @@
     </div>
 
     <div class="large-9 columns">
-      <% @quests.each do |x|%>
-        <% unless @completed_quests.include? x.id %>
-        <div class="row quest<% if @selected_quests.include? x.id %> accepted<% end if @selected_quests %>">
-            <div class="large-2 columns small-3 new-quest" quest="<%= x.id %>"><img src="<%= x.icon_url %>"/></div>
+      <% @quests.each do |quest|%>
+        <% unless @completed_quests.include? quest.id %>
+        <div class="row quest<% if @selected_quests.include? quest.id %> accepted<% end if @selected_quests %>">
+            <div class="large-2 columns small-3 new-quest" quest="<%= quest.id %>"><img src="<%= quest.icon_url %>"/></div>
           <div class="large-10 columns">
-            <p><strong><%= x.name %>:</strong> <%= x.description %><% unless x.link.blank? %><a href='<%= x.link %>'>here.</a><% end %></p>
-            <p><strong>Experience Points: </strong><%= x.experience_points %></p>
+            <p><strong><%= quest.name %>:</strong> <%= quest.description %><% unless quest.link.blank? %><a href='<%= quest.link %>'>here.</a><% end %></p>
+            <p><strong>Experience Points: </strong><span id="current-xp-<%= quest.id %>"><%= quest.current_experience_points %></span><% if user_signed_in? %><span class="vote upvote" quest_id="<%= quest.id %>">+</span> <span class="vote downvote" quest_id="<%= quest.id %>">-</span><% end %></p>
           </div>
 
         </div>

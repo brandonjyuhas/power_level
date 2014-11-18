@@ -14,10 +14,13 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
+# Use acts_as_votable to handle quest votes
+gem 'acts_as_votable', '~> 0.10.0'
+
 # Use Devise for user authentication
 gem 'devise'
 
-# Use {ry for debugging
+# Use pry for debugging
 gem 'pry'
 
 # Use Foundation for CSS

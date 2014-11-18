@@ -4,7 +4,7 @@ class UserQuest < ActiveRecord::Base
 
   def completed
     unless self.complete == true
-      self.user.experience_points += self.quest.experience_points
+      self.user.experience_points += self.quest.current_experience_points
       self.complete = true
       self.user.save
       self.save

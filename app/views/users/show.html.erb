@@ -19,21 +19,21 @@
   <div class="large-8 columns">
     <div class="panel"><h1>Active Quests</h1>(Click to close, click text to expand)</div>
     <div class="row">
-      <% @user_quests.each do |x| %>
-        <% unless x.complete %>
-        <div class="large-4 small-6 columns" id="<%= x.id %>">
-          <img src="<%= x.quest.skill.icon_url %>" data-reveal-id="myModal<%= x.id %>">
+      <% @user_quests.each do |user_quest| %>
+        <% unless user_quest.complete %>
+        <div class="large-4 small-6 columns" id="<%= user_quest.id %>">
+          <img src="<%= user_quest.quest.skill.icon_url %>" data-reveal-id="myModal<%= user_quest.id %>">
           <div class="panel closed expandable">
-            <h5><%= x.quest.name %></h5>
-            <h6 class="subheader"><%= x.quest.description %><% unless x.quest.link.blank? %><a href='<%= x.quest.link %>'>here.</a><% end %></h6>
+            <h5><%= user_quest.quest.name %></h5>
+            <h6 class="subheader"><%= user_quest.quest.description %><% unless user_quest.quest.link.blank? %><a href='<%= user_quest.quest.link %>'>here.</a><% end %></h6>
           </div>
 
 
-          <div id="myModal<%= x.id %>" class="reveal-modal" data-reveal>
+          <div id="myModal<%= user_quest.id %>" class="reveal-modal" data-reveal>
             <h2>Are you sure you want to complete this quest?</h2>
             <p>Cheaters never win.</p>
             <a class="close-reveal-modal">&#215;</a>
-            <h1 class="complete radius button" quest="<%= x.quest.id %>" user-quest="<%= x.id %>" quest-xp="<%= x.quest.experience_points %>">Complete Quest</h1>
+            <h1 class="complete radius button" quest="<%= user_quest.quest.id %>" user-quest="<%= user_quest.id %>" quest-xp="<%= user_quest.quest.current_experience_points %>">Complete Quest</h1>
           </div>
         </div>
         <% end %>
@@ -42,13 +42,13 @@
 
     <div class="panel"><h1>Completed Quests</h1>(Click text to expand)</div>
     <div class="row completed">
-      <% @user_quests.each do |x| %>
-        <% if x.complete %>
-        <div class="large-4 small-6 columns" id="<%= x.id %>">
-          <img src="<%= x.quest.skill.icon_url %>">
+      <% @user_quests.each do |user_quest| %>
+        <% if user_quest.complete %>
+        <div class="large-4 small-6 columns" id="<%= user_quest.id %>">
+          <img src="<%= user_quest.quest.skill.icon_url %>">
           <div class="panel closed expandable">
-            <h5><%= x.quest.name %></h5>
-            <h6 class="subheader"><%= x.quest.description %><% unless x.quest.link.blank? %><a href='<%= x.quest.link %>'>here.</a><% end %></h6>
+            <h5><%= user_quest.quest.name %></h5>
+            <h6 class="subheader"><%= user_quest.quest.description %><% unless user_quest.quest.link.blank? %><a href='<%= user_quest.quest.link %>'>here.</a><% end %></h6>
           </div>
         </div>
       <% end %>
