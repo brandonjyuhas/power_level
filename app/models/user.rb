@@ -4,10 +4,11 @@ class User < ActiveRecord::Base
   # Include title module in lib/title.rb
   include Title
 
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
-  has_many :user_experience_points
-  has_many :user_quests
+  devise    :database_authenticatable, :registerable,
+            :recoverable, :rememberable, :trackable, :validatable
+  has_many  :user_experience_points
+  has_many  :user_quests
+  has_many  :user_parties
   validates :username, presence: true
   validates :icon_url, presence: true
 

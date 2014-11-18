@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141118212831) do
+ActiveRecord::Schema.define(version: 20141118223737) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,11 @@ ActiveRecord::Schema.define(version: 20141118212831) do
 
   add_index "experience_points", ["skill_id"], name: "index_experience_points_on_skill_id", using: :btree
   add_index "experience_points", ["user_id"], name: "index_experience_points_on_user_id", using: :btree
+
+  create_table "parties", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "quests", force: true do |t|
     t.integer  "skill_id"
@@ -44,6 +49,11 @@ ActiveRecord::Schema.define(version: 20141118212831) do
   create_table "skills", force: true do |t|
     t.string   "name"
     t.string   "icon_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "user_parties", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
