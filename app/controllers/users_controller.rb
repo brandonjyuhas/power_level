@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   def index
     @users = User.all
+    @parties = current_user.find_parties if user_signed_in?
   end
 
   def show

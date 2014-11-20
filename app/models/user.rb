@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
   has_many  :user_experience_points
   has_many  :user_quests
   has_many  :user_parties
+  has_many  :parties, through: :user_parties
   validates :username, presence: true
   validates :icon_url, presence: true
 
@@ -36,5 +37,14 @@ class User < ActiveRecord::Base
   # Join a party
   def join_party(party)
     UserParty.create(user_id: self.id, party_id: party)
+  end
+
+  def find_parties
+    user_parties = UserParty.where(user_id: self.id)
+    unless user_parties.empty?
+      user_parties.map do |user_party|
+        Party.find(user_party.party_id)
+      end
+    end
   end
 end

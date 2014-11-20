@@ -16,11 +16,29 @@
             <a href="/users/<%= user.id %>"><div class="large-2 columns small-3" user="<%= user.id %>"><img src="<%= user.icon_url %>"/></div></a>
           <div class="large-10 columns">
             <p><strong><%= user.username %>:</strong> <p>Level <%= stats[0] %> <%= stats[3] %> <%= stats[4] %></p>
-            <% if user_signed_in? %><button class="radius button">Add to Party!</button><% end %>
+            <% if user_signed_in? %><button class="radius button" data-reveal-id="partyModal">Add to Party!</button><% end %>
           </div>
         </div>
         <hr/>
         <% end %>
       <% end %>
     </div>
+  </div>
+
+  <div id="partyModal" class="reveal-modal" data-reveal>
+    <h3>Select a party!</h3>
+    <% unless @parties.nil? %>
+      <% @parties.each do |party| %>
+        <div class="party">
+        <button class="radius button"><%= party.name %></button>:
+        <% party.users.each do |user| %>
+          <div class="party-user-display">
+            <img src="<%= user.icon_url %>" class="party-image" />
+            <%= user.username %>
+          </div>
+        <% end %>
+        </div>
+      <% end %>
+    <% end %>
+    <button class="radius button">Create Party</button>
   </div>

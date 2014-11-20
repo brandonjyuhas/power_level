@@ -13,3 +13,16 @@
   border: 5px solid green;
   border-radius: 5px;
 }
+
+.party {
+  display: block;
+}
+
+.party-user-display {
+  display: inline-block;
+}
+
+.party-image {
+  height: 100px;
+  display: block;
+}
