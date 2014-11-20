@@ -32,4 +32,9 @@ class User < ActiveRecord::Base
   def find_level
     determine_level(self.experience_points, self.user_quests.where(complete: true))
   end
+
+  # Join a party
+  def join_party(party)
+    UserParty.create(user_id: self.id, party_id: party)
+  end
 end

@@ -1,0 +1,26 @@
+  <div class="row">
+    <div class="large-12 columns">
+      <div class="panel">
+        <h1><% if user_signed_in? %>Click Users to Invite to Party<% else %>Sign In to add Users to Parties<% end %></h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="large-12 columns">
+      <% @users.each do |user|%>
+      <% stats = user.find_level %>
+        <% unless user == current_user %>
+        <div class="row">
+            <a href="/users/<%= user.id %>"><div class="large-2 columns small-3" user="<%= user.id %>"><img src="<%= user.icon_url %>"/></div></a>
+          <div class="large-10 columns">
+            <p><strong><%= user.username %>:</strong> <p>Level <%= stats[0] %> <%= stats[3] %> <%= stats[4] %></p>
+            <% if user_signed_in? %><button class="radius button">Add to Party!</button><% end %>
+          </div>
+        </div>
+        <hr/>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
