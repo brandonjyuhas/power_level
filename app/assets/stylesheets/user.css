@@ -24,6 +24,7 @@
 
 .party-user-display {
   display: inline-block;
+  margin-left: 5px;
 }
 
 .party-image {
