@@ -18,6 +18,10 @@
   display: block;
 }
 
+.expanded-width {
+  width: 100%;
+}
+
 .party-user-display {
   display: inline-block;
 }

@@ -6,17 +6,15 @@
     </div>
   </div>
 
-  <div class="row">
-
-    <div class="large-12 columns">
+      <div class="row">
       <% @users.each do |user|%>
       <% stats = user.find_level %>
         <% unless user == current_user %>
-        <div class="row">
+          <div class="large-12 columns">
             <a href="/users/<%= user.id %>"><div class="large-2 columns small-3" user="<%= user.id %>"><img src="<%= user.icon_url %>"/></div></a>
           <div class="large-10 columns">
             <p><strong><%= user.username %>:</strong> <p>Level <%= stats[0] %> <%= stats[3] %> <%= stats[4] %></p>
-            <% if user_signed_in? %><button class="radius button" data-reveal-id="partyModal">Add to Party!</button><% end %>
+            <% if user_signed_in? %><button class="radius button open-party" data-reveal-id="partyModal" user="<%= user.id %>">Add to Party!</button><% end %>
           </div>
         </div>
         <hr/>
@@ -25,20 +23,34 @@
     </div>
   </div>
 
-  <div id="partyModal" class="reveal-modal" data-reveal>
+  <div id="partyModal" class="reveal-modal" user="" data-reveal>
+    <a class="close-reveal-modal">&#215;</a>
     <h3>Select a party!</h3>
+    <div id="parties" class="row">
     <% unless @parties.nil? %>
-      <% @parties.each do |party| %>
-        <div class="party">
-        <button class="radius button"><%= party.name %></button>:
-        <% party.users.each do |user| %>
-          <div class="party-user-display">
-            <img src="<%= user.icon_url %>" class="party-image" />
-            <%= user.username %>
+        <% @parties.each do |party| %>
+          <div class="party large-12 columns">
+            <div class="large-2 columns expanded-height add-to-party" party='<%= party.id %>'>
+              <button class="radius button expanded-width"><%= party.name %></button>
+            </div>
+            <div class="large-10 columns">
+              <% party.users.each do |user| %>
+                <div class="party-user-display">
+                  <img src="<%= user.icon_url %>" class="party-image" />
+                  <%= user.username %>
+                </div>
+              <% end %>
+            </div>
           </div>
         <% end %>
-        </div>
       <% end %>
-    <% end %>
-    <button class="radius button">Create Party</button>
+    </div>
+    <button class="radius button" data-reveal-id="newPartyModal">Create Party</button>
+  </div>
+
+  <div id="newPartyModal" class="reveal-modal" data-reveal>
+    <a class="close-reveal-modal">&#215;</a>
+    <h1>New Party:</h1>
+    Name: <input type="text" name="name">
+    <input type="submit" id="createParty" class="radius button">
   </div>

@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   root "welcome#index"
   # Pass users to custom registrations controller
-  devise_for :users, :controllers => { registrations: 'registrations' }
-  resources :users
-  resources :quests do
+  devise_for  :users, :controllers => { registrations: 'registrations' }
+  resources   :users
+  resources   :parties, only: [:create]
+  resources   :user_parties, only: [:create]
+  resources   :quests do
     member do
       put "like", to: "quests#upvote"
       put "dislike", to: "quests#downvote"
