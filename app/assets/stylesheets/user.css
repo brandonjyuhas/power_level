@@ -13,3 +13,21 @@
   border: 5px solid green;
   border-radius: 5px;
 }
+
+.party {
+  display: block;
+}
+
+.expanded-width {
+  width: 100%;
+}
+
+.party-user-display {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.party-image {
+  height: 100px;
+  display: block;
+}

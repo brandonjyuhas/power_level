@@ -14,6 +14,17 @@
       <h6><span id="xp-level"><%= @level[1] %></span> XP until Level <span id="next-level"><%= @level[0] + 1 %></span></h6>
     </div>
 
+    <% unless @user.parties.empty? %>
+    <div class="panel callout radius">
+      <h5>Parties</h5>
+      <% @user.parties.each do |party| %>
+        <p> <%= party.name %> </p>
+
+      <% end %>
+
+    </div>
+    <% end %>
+
   </div>
 
   <div class="large-8 columns">
@@ -22,7 +33,7 @@
       <% @user_quests.each do |user_quest| %>
         <% unless user_quest.complete %>
         <div class="large-4 small-6 columns" id="<%= user_quest.id %>">
-          <img src="<%= user_quest.quest.skill.icon_url %>" data-reveal-id="myModal<%= user_quest.id %>">
+          <img src="<%= user_quest.quest.skill.icon_url %>" <% if @user == current_user %> data-reveal-id="myModal<%= user_quest.id %>" <% end %>>
           <div class="panel closed expandable">
             <h5><%= user_quest.quest.name %></h5>
             <h6 class="subheader"><%= user_quest.quest.description %><% unless user_quest.quest.link.blank? %><a href='<%= user_quest.quest.link %>'>here.</a><% end %></h6>

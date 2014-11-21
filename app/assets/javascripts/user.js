@@ -3,6 +3,7 @@ $('.expandable').on('click', function(){
   $(this).toggleClass('closed');
 });
 
+// Complete Quests
 $('.complete').on('click', function(){
   var quest = $(this)
     $.ajax({

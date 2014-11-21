@@ -593,5 +593,53 @@ Quest.create([
       email: "brandonjyuhas@gmail.com",
       password: "password",
       icon_url: "/assets/user_icons/1.jpg"
+    },
+    {
+      username: "cynthia12",
+      email: "cynthia12@gmail.com",
+      password: "password",
+      icon_url: "/assets/user_icons/2.jpg"
+    },
+    {
+      username: "Jake The Awesome",
+      email: "jakesemail@gmail.com",
+      password: "password",
+      icon_url: "/assets/user_icons/3.jpg"
+    },
+    {
+      username: "darth vader",
+      email: "starwarsfan@gmail.com",
+      password: "password",
+      icon_url: "/assets/user_icons/4.jpg"
+    },
+    {
+      username: "Christiano Ronaldo",
+      email: "therealdeal@gmail.com",
+      password: "password",
+      icon_url: "/assets/user_icons/5.jpg"
+    },
+    {
+      username: "sam",
+      email: "sam@gmail.com",
+      password: "password",
+      icon_url: "/assets/user_icons/6.jpg"
+    },
+    {
+      username: "coffee lover 18",
+      email: "luvcoffee@gmail.com",
+      password: "password",
+      icon_url: "/assets/user_icons/7.jpg"
+    },
+    {
+      username: "marylandterpsrule100",
+      email: "garywilliams@gmail.com",
+      password: "password",
+      icon_url: "/assets/user_icons/8.jpg"
+    },
+    {
+      username: "skaterboi",
+      email: "skatin@gmail.com",
+      password: "password",
+      icon_url: "/assets/user_icons/4.jpg"
     }
     ])
